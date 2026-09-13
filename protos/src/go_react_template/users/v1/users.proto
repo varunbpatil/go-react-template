@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package go_react_template.users.v1;
+
+service UserService {
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+message User {
+  string name = 1;
+}
